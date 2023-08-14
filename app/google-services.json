@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "977254406746",
+    "project_id": "fir-storage-a3663",
+    "storage_bucket": "fir-storage-a3663.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977254406746:android:aa7839e14d4439eb451663",
+        "android_client_info": {
+          "package_name": "com.example.photopicker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977254406746-g9umuac41t39b2jo5vk7pc710c19bi1i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqgu98EVX1f8T77byPZxawz-nVKP3zgfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977254406746-g9umuac41t39b2jo5vk7pc710c19bi1i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
