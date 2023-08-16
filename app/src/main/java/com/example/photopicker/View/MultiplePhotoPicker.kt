@@ -45,7 +45,7 @@ fun MultiplePhotoPicker(){
                         PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)
                     )
                 }) {
-                    Text("Open Gallery")
+                    Text("Pick Multiple Images")
 
                 }
             }
@@ -61,7 +61,7 @@ fun MultiplePhotoPicker(){
             imageUris.forEach{ uri ->
 
                 uri?.let{
-                    StorageUtil.uploadToStorage(uri=it, context=context)
+                    StorageUtil.uploadToStorage(uri=it, context=context, type="image")
                 }
             }
 

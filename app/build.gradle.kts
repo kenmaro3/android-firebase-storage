@@ -69,13 +69,21 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
 
+    // coil for asyncImage
     implementation("io.coil-kt:coil-compose:2.3.0")
 
+    // firebase
     implementation(platform("com.google.firebase:firebase-bom:32.2.2"))
     implementation("com.google.firebase:firebase-analytics-ktx")
+    // firebase storage
     implementation("com.google.firebase:firebase-storage-ktx")
 
+    // navigation
     implementation("androidx.navigation:navigation-compose:2.5.3")
 
     implementation("androidx.compose.material:material:1.4.2")
+
+    // for video
+    implementation ("com.google.android.exoplayer:exoplayer:2.16.1")
+
 }

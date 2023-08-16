@@ -8,6 +8,7 @@ import androidx.compose.material.Icon
 import androidx.compose.material.LocalContentColor
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.outlined.Home
 import androidx.compose.material.icons.outlined.Person
 import androidx.compose.material3.Text
@@ -37,6 +38,16 @@ fun BottomBar(navController: NavHostController){
     var homeBottomElement: BottomBarScreen by remember{
         mutableStateOf(
             BottomBarScreen(
+                route = "home",
+                title = "home",
+                icon = Icons.Default.Home
+            )
+        )
+    }
+
+    var singleBottomElement: BottomBarScreen by remember{
+        mutableStateOf(
+            BottomBarScreen(
                 route = "single",
                 title = "Single",
                 icon = Icons.Default.Add
@@ -44,7 +55,7 @@ fun BottomBar(navController: NavHostController){
         )
     }
 
-    var profileBottomElement: BottomBarScreen by remember{
+    var multiBottomElement: BottomBarScreen by remember{
         mutableStateOf(
             BottomBarScreen(
                 route = "multi",
@@ -54,9 +65,21 @@ fun BottomBar(navController: NavHostController){
         )
     }
 
+    var singleVideoBottomElement: BottomBarScreen by remember {
+       mutableStateOf(
+          BottomBarScreen(
+              route = "video",
+              title = "Video",
+              icon = Icons.Default.Add
+          )
+       )
+    }
+
     val screens = listOf(
         homeBottomElement,
-        profileBottomElement
+        singleBottomElement,
+        multiBottomElement,
+        singleVideoBottomElement
     )
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination

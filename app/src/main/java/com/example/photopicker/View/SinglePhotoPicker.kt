@@ -43,14 +43,14 @@ fun SinglePhotoPicker(){
             )
 
         }){
-            Text("Pick image")
+            Text("Pick Single Image")
         }
 
         AsyncImage(model = uri, contentDescription = null, modifier = Modifier.size(248.dp))
 
         Button(onClick = {
             uri?.let{
-                StorageUtil.uploadToStorage(uri=it, context=context)
+                StorageUtil.uploadToStorage(uri=it, context=context, type="image")
             }
 
         }){

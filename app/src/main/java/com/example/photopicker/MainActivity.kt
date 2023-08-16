@@ -12,8 +12,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.photopicker.View.BottomBar
+import com.example.photopicker.View.Home
 import com.example.photopicker.View.MultiplePhotoPicker
 import com.example.photopicker.View.SinglePhotoPicker
+import com.example.photopicker.View.SingleVideoPicker
 import com.example.photopicker.ui.theme.PhotoPickerTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,6 +26,17 @@ class MainActivity : ComponentActivity() {
                 val navController = rememberNavController()
 
                 NavHost(navController = navController, startDestination = "single") {
+                    composable("home") {
+                        Scaffold(
+                            bottomBar = {
+                                BottomBar(
+                                    navController = navController
+                                )
+                            },
+                        ) { contentPadding ->
+                            Home()
+                        }
+                    }
                     composable("single") {
                         Scaffold(
                             bottomBar = {
@@ -42,6 +55,16 @@ class MainActivity : ComponentActivity() {
                             },
                         ){ contentPadding ->
                             MultiplePhotoPicker()
+                        }
+                    }
+
+                    composable("video") {
+                        Scaffold(
+                            bottomBar = {
+                                BottomBar(navController = navController)
+                            },
+                        ){ contentPadding ->
+                            SingleVideoPicker()
                         }
                     }
                     /*...*/
