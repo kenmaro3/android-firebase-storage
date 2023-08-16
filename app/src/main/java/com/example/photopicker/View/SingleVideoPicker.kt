@@ -3,17 +3,12 @@ package com.example.photopicker.View
 import android.graphics.Bitmap
 import android.media.MediaMetadataRetriever
 import android.net.Uri
-import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -45,10 +40,6 @@ fun SingleVideoPicker(){
     val context = LocalContext.current
 
     Column(
-//        modifier = Modifier
-//            .background(androidx.compose.ui.graphics.Color.White)
-//            .fillMaxSize()
-//            .verticalScroll(rememberScrollState())
     ){
         Row{
             Button(onClick = {

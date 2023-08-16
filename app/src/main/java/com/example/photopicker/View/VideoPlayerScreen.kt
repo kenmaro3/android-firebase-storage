@@ -1,6 +1,5 @@
 package com.example.photopicker.View
 
-import android.media.browse.MediaBrowser
 import android.net.Uri
 import android.view.ViewGroup
 import android.widget.FrameLayout
